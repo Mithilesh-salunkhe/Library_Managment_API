@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit the book</title>
+    <link rel="stylesheet" href="/style2.css">
+</head>
+<body>
+   <div class="top">
+    <h2>You are about to Edit the Book Information ID:- <%= book.B_id %></h2>
+   </div>
+   <div class="main">
+        <form action="/books/<%= book.B_id %>/?_method=PATCH" method="post">
+            <input type="text" placeholder="Enter the new book name" name="B_name"><br>
+            <input type="text" placeholder="Enter the author name" name="B_author" ><br>
+            <button>Submit</button>
+        </form>
+    </div>
+</body>
+</html>
